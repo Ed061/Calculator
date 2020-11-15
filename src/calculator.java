@@ -29,6 +29,18 @@ public class calculator {
 		return Math.cbrt(num1);
 	}
 	
+	public static String tohex(int num1) {
+		int rem;
+		char hexchars[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+		String conv = "";
+		while(num1 != 0) {
+			rem = num1 % 16;
+			conv = hexchars[rem] + conv;
+			num1 = num1/16;
+		}
+		return conv;
+	}
+	
 	public static void main (String[]args) {
 		String con = "Y";
 		Scanner scan = new Scanner(System.in);
@@ -38,6 +50,7 @@ public class calculator {
 		 System.out.println("[2] Modulo");
 		 System.out.println("[3] Square root");
 		 System.out.println("[4] Cube root");
+		 System.out.println("[5] Convert number to hex");
 		 
 		 double num1 = 0, num2 = 0;
 		 //int choice = 0;
@@ -67,13 +80,20 @@ public class calculator {
 		 		num1 = scan.nextInt();
 		 		System.out.println(cbroot(num1));
 		 		break;
+		 	case "5":
+		 		System.out.println("Enter your number");
+		 		int hexnr;
+		 		hexnr = scan.nextInt();
+		 		System.out.println(tohex(hexnr));
+		 		break;
 			default:
 				System.out.println("unknown choise");
 		 }
 		 	System.out.println("Do you want to continue?");
 		 	//con = scan.nextLine();
 		 	while ((con = scan.nextLine()).isEmpty()) {
-		 	}//not finished, need to turn to upper case 
+		 	}
+		 	con = con.toUpperCase();//converting to upper case letter
 		} 
 		while (con.equals("Y"));
 		scan.close();
