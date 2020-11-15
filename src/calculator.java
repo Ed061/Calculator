@@ -73,7 +73,7 @@ public class calculator {
 		 	System.out.println("Do you want to continue?");
 		 	//con = scan.nextLine();
 		 	while ((con = scan.nextLine()).isEmpty()) {
-		 	}
+		 	}//not finished, need to turn to upper case 
 		} 
 		while (con.equals("Y"));
 		scan.close();
