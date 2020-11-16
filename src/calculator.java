@@ -96,7 +96,7 @@ public class calculator {
 		 	con = con.toUpperCase();//converting to upper case letter
 		} 
 		while (con.equals("Y"));
-		scan.close();
+		//scan.close();
 	
 	try (//aadil
 	Scanner scan1 = new Scanner(System.in)) {
