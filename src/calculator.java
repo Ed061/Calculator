@@ -142,22 +142,7 @@ public class calculator {
 	}
 	
 	
-	
-	
-	
-	
-	
-	
 }
-	private static void celsius() {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	
-	
-	
-	
 	
 }
 //comment
