@@ -42,6 +42,7 @@ public class calculator {
 	}
 	
 	public static void main (String[]args) {
+		celsius();
 		String con = "Y";
 		Scanner scan = new Scanner(System.in);
 		do {
@@ -97,6 +98,8 @@ public class calculator {
 		} 
 		while (con.equals("Y"));
 		//scan.close();
+		
+
 	
 	try (//aadil
 	Scanner scan1 = new Scanner(System.in)) {
@@ -146,6 +149,10 @@ public class calculator {
 	
 	
 }
+	private static void celsius() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	
