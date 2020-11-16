@@ -141,8 +141,7 @@ public class calculator {
 		//aadil
 	}
 	
-	
 }
-	
+
 }
 //comment
