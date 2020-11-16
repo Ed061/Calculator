@@ -145,3 +145,4 @@ public class calculator {
 
 }
 //comment
+//binary
