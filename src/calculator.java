@@ -44,8 +44,9 @@ public class calculator {
 	public static void main (String[]args) {
 		//celsius();
 		String con = "Y";
-		Scanner scan = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);//opening the scanner
 		do {
+		//list the following operations
 		 System.out.println("Select one of the following:"); 
 		 System.out.println("[1] Power");
 		 System.out.println("[2] Modulo");
@@ -57,7 +58,7 @@ public class calculator {
 		 //int choice = 0;
 		
 		 String choice = scan.nextLine();
-		 
+		 //doing the selected operations
 		 switch(choice) {
 		 	case "1":
 		 		System.out.println("Enter your numbers");
@@ -87,6 +88,7 @@ public class calculator {
 		 		hexnr = scan.nextInt();
 		 		System.out.println(tohex(hexnr));
 		 		break;
+		 	//you can put your choices after this line or above case "1"
 			default:
 				System.out.println("unknown choise");
 		 }
