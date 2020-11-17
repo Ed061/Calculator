@@ -42,7 +42,7 @@ public class calculator {
 	}
 	
 	public static void main (String[]args) {
-		celsius();
+		//celsius();
 		String con = "Y";
 		Scanner scan = new Scanner(System.in);
 		do {
