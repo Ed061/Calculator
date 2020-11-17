@@ -29,14 +29,14 @@ public class calculator {
 		return Math.cbrt(num1);
 	}
 	
-	public static String tohex(int num1) {
-		int rem;
+	public static String tohex(int num) {
+		int rem = 0;
 		char hexchars[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
 		String conv = "";
-		while(num1 != 0) {
-			rem = num1 % 16;
+		while(num != 0) {
+			rem = num % 16;
 			conv = hexchars[rem] + conv;
-			num1 = num1/16;
+			num = num/16;
 		}
 		return conv;
 	}
@@ -141,8 +141,8 @@ public class calculator {
 		//aadil
 	}
 	
-	
 }
-	
+
 }
 //comment
+//binary
