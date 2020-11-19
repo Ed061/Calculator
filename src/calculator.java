@@ -41,8 +41,7 @@ public class calculator {
 		return conv;
 	}
 	
-	public static void main (String[]args) {
-		//celsius();
+	public static void main (String[]args) {	
 		String con = "Y";
 		Scanner scan = new Scanner(System.in);
 		do {
@@ -99,6 +98,22 @@ public class calculator {
 		while (con.equals("Y"));
 		//scan.close();
 		
+		
+		//Divy---------------------------------------------------
+		Scanner ob1 = new Scanner(System.in);
+			temperature tempObject = new temperature ();
+			
+			System.out.println("Please enter a 1 to convert Fahrenheit to Celsius or Please enter a 2 to convert Celsius to Fahrenheit");
+			String option = ob1.next();
+		  if (option.equals("1")){
+		      System.out.println("Please enter a temperature in degrees Fahrenheit.");
+		      tempObject.cel();
+		  }else if (option.equals("2")){
+		      System.out.println("Please enter a temperature in degrees Celsius.");
+		      tempObject.fah();
+		  }else{
+		      System.out.println("ERROR!");
+		  }
 
 	
 	try (//aadil
@@ -141,7 +156,10 @@ public class calculator {
 		//aadil
 	}
 	
+
+
 }
+
 
 }
 //comment
