@@ -28,7 +28,15 @@ public class calculator {
 		
 		return Math.cbrt(num1);
 	}
-	
+//Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	public static double celsius(double num1) {
+		return ((num1*1.8)+32);
+	}
+	public static double fahrenhiet(double num1) {
+		return ((num1 -32 ) * 5/9);
+	}
+//Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 	public static String tohex(int num) {
 		int rem = 0;
 		char hexchars[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
@@ -52,7 +60,8 @@ public class calculator {
 		 System.out.println("[3] Square root");
 		 System.out.println("[4] Cube root");
 		 System.out.println("[5] Convert number to hex");
-		 
+		 System.out.println("[6] Convert Celsius into Fahrenheit");
+		 System.out.println("[7] Convert Fahrenheit into Celsius");
 		 double num1 = 0, num2 = 0;
 		 //int choice = 0;
 		
@@ -87,6 +96,18 @@ public class calculator {
 		 		hexnr = scan.nextInt();
 		 		System.out.println(tohex(hexnr));
 		 		break;
+//Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		 	case "6":
+		 		System.out.println("Enter your number");
+		 		num1 = scan.nextInt();
+		 		System.out.println(celsius(num1));
+		 		break;
+		 	case "7":
+		 		System.out.println("Enter your number");
+		 		num1 = scan.nextInt();
+		 		System.out.println(fahrenhiet(num1));
+		 		break;
+//Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		 	//you can put your choices after this line or above case "1"
 			default:
 				System.out.println("unknown choise");
@@ -101,22 +122,22 @@ public class calculator {
 		//scan.close();
 		
 		
-		//Divy---------------------------------------------------
-		Scanner ob1 = new Scanner(System.in);
-			temperature tempObject = new temperature ();
-			
-			System.out.println("Please enter a 1 to convert Fahrenheit to Celsius or Please enter a 2 to convert Celsius to Fahrenheit");
-			String option = ob1.next();
-		  if (option.equals("1")){
-		      System.out.println("Please enter a temperature in degrees Fahrenheit.");
-		      tempObject.cel();
-		  }else if (option.equals("2")){
-		      System.out.println("Please enter a temperature in degrees Celsius.");
-		      tempObject.fah();
-		  }else{
-		      System.out.println("ERROR!");
-		  }
-
+//Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//		Scanner ob1 = new Scanner(System.in);
+//			temperature tempObject = new temperature ();
+//			
+//			System.out.println("Please enter a 1 to convert Fahrenheit to Celsius or Please enter a 2 to convert Celsius to Fahrenheit");
+//			String option = ob1.next();
+//		  if (option.equals("1")){
+//		      System.out.println("Please enter a temperature in degrees Fahrenheit.");
+//		      tempObject.cel();
+//		  }else if (option.equals("2")){
+//		      System.out.println("Please enter a temperature in degrees Celsius.");
+//		      tempObject.fah();
+//		  }else{
+//		      System.out.println("ERROR!");
+//		  }
+//Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
 	try (//aadil
 	Scanner scan1 = new Scanner(System.in)) {

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class temperature {
 
-    public static void cel() {
+    public static void cel(double num1) {
         Scanner ob = new Scanner(System.in);
         double celsius = ob.nextInt();
         System.out.println(((celsius * 1.8) + 32) + " Fahrenheit");
