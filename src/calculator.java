@@ -49,6 +49,37 @@ public class calculator {
 		return conv;
 	}
 	
+//Aadil -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	public static double add(double num1, double num2) {
+		double ans;
+		ans=num1+num2;
+		return ans;
+		
+	}
+	
+	public static double sub(double num1, double num2) {
+		double ans;
+		ans=num1-num2;
+		return ans;
+		
+	}
+	
+	public static double multi(double num1, double num2) {
+		double ans;
+		ans=num1*num2;
+		return ans;
+		
+	}
+	
+	public static double div(double num1, double num2) {
+		double ans;
+		ans=num1/num2;
+		return ans;
+	}
+	
+//Aadil -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
 	public static void main (String[]args) {	
 		String con = "Y";
 		Scanner scan = new Scanner(System.in);//opening the scanner
@@ -62,6 +93,10 @@ public class calculator {
 		 System.out.println("[5] Convert number to hex");
 		 System.out.println("[6] Convert Celsius into Fahrenheit");
 		 System.out.println("[7] Convert Fahrenheit into Celsius");
+		 System.out.println("[8] Addition");
+		 System.out.println("[9] Subtraction");
+		 System.out.println("[10] Multiplication");
+		 System.out.println("[11] Division");
 		 double num1 = 0, num2 = 0;
 		 //int choice = 0;
 		
@@ -107,9 +142,42 @@ public class calculator {
 		 		num1 = scan.nextInt();
 		 		System.out.println(fahrenhiet(num1));
 		 		break;
+		 	
+
 //Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		 	//you can put your choices after this line or above case "1"
-			default:
+
+
+//Aadil -----------------------------------------------------------------------------------------------------------------------------------------------------------------------		 		
+		 	case "8":
+		 		System.out.println("Enter your numbers");
+		 		num1 = scan.nextDouble();
+		 		num2 = scan.nextDouble();
+		 		System.out.println(add(num1, num2));
+		 		break;
+		 	case "9":
+		 		System.out.println("Enter your numbers");
+		 		num1 = scan.nextDouble();
+		 		num2 = scan.nextDouble();
+		 		System.out.println(sub(num1, num2));
+		 		break;
+		 	case "10":
+		 		System.out.println("Enter your numbers");
+		 		num1 = scan.nextDouble();
+		 		num2 = scan.nextDouble();
+		 		System.out.println(multi(num1, num2));
+		 		break;
+		 	case "11":
+		 		System.out.println("Enter your numbers");
+		 		num1 = scan.nextDouble();
+		 		num2 = scan.nextDouble();
+		 		System.out.println(div(num1, num2));
+		 		break;
+		 
+//Aadil -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		 	
+
+		 	
+		 	default:
 				System.out.println("unknown choise");
 		 }
 		 	System.out.println("Do you want to continue?");
@@ -119,9 +187,10 @@ public class calculator {
 		 	con = con.toUpperCase();//converting to upper case letter
 		} 
 		while (con.equals("Y"));
+	
 		//scan.close();
-		
-		
+	}		
+}
 //Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //		Scanner ob1 = new Scanner(System.in);
 //			temperature tempObject = new temperature ();
@@ -139,51 +208,4 @@ public class calculator {
 //		  }
 //Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
-	try (//aadil
-	Scanner scan1 = new Scanner(System.in)) {
-		double input1, input2, ans;
-		int selection;
-		System.out.println("Enter 2 numbers: ");
-		input1=scan1.nextDouble();
-		input2=scan1.nextDouble();
-		//allows user to input two numbers
-		
-		System.out.println("Choose what operator you want to use: ");
-		System.out.println("1. addition: ");
-		System.out.println("2. subtraction: ");
-		System.out.println("3. division: ");
-		System.out.println("4. multiplication: ");
-		//User selects what operator they want to use
-		
-		selection=scan1.nextInt();
-		while(selection>4) {
-			System.out.println("enter the correct selection");
-			selection=scan1.nextInt();
-		}
-		//gives user chances to choose the proper operator
-		
-		Operator thing =new Operator();
-		if(selection==1) {
-			ans=thing.add(input1,input2);
-			System.out.println("your answer is "+ans);
-		}else if(selection==2) {
-			ans=thing.sub(input1,input2);
-			System.out.println("your answer is "+ans);
-		}else if(selection==3) {
-			ans=thing.div(input1,input2);
-			System.out.println("your answer is "+ans);
-		}else if(selection==4) {
-			ans=thing.multi(input1,input2);
-			System.out.println("your answer is "+ans);
-		}
-		//aadil
-	}
 	
-
-
-}
-
-
-}
-//comment
-//binary
