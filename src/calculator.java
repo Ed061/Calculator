@@ -105,14 +105,14 @@ public class calculator {
 		 switch(choice) {
 		 	case "1":
 		 		System.out.println("Enter your numbers");
-		 		num1 = scan.nextInt();
-		 		num2 = scan.nextInt();
+		 		num1 = scan.nextDouble();
+		 		num2 = scan.nextDouble();
 		 		System.out.println(power(num1, num2));
 		 		break;
 		 	case "2":
 		 		System.out.println("Enter your numbers");
-		 		num1 = scan.nextInt();
-		 		num2 = scan.nextInt();
+		 		num1 = scan.nextDouble();
+		 		num2 = scan.nextDouble();
 		 		System.out.println(modulus(num1, num2));
 		 		break;
 		 	case "3":
@@ -134,12 +134,12 @@ public class calculator {
 //Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		 	case "6":
 		 		System.out.println("Enter your number");
-		 		num1 = scan.nextInt();
+		 		num1 = scan.nextDouble();
 		 		System.out.println(celsius(num1));
 		 		break;
 		 	case "7":
 		 		System.out.println("Enter your number");
-		 		num1 = scan.nextInt();
+		 		num1 = scan.nextDouble();
 		 		System.out.println(fahrenhiet(num1));
 		 		break;
 		 	
