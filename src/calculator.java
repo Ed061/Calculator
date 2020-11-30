@@ -78,6 +78,29 @@ public class calculator {
 		return ans;
 	}
 	
+//Shayiq ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	public static void metric(double num1, double num2) {
+		double mass;
+		double length;
+		mass =num1/28.35;
+		length =num2/2.54;
+		System.out.println(mass + " ounces");
+		System.out.println(length + " inches");
+		}
+	
+	public static void imperial(double num1, double num2) {
+		double mass;
+		double length;
+		mass=num1*28.35;
+		length=num2*2.54;
+		System.out.println(mass + " grams");
+		System.out.println(length + " centimeters");
+	}
+	
+//Shayiq ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+
 //Aadil -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
 	public static void main (String[]args) {	
@@ -97,6 +120,8 @@ public class calculator {
 		 System.out.println("[9] Subtraction");
 		 System.out.println("[10] Multiplication");
 		 System.out.println("[11] Division");
+		 System.out.println("[12] Convert Metric into Imperial");
+		 System.out.println("[13] Convert Imperial into Metric");
 		 double num1 = 0, num2 = 0;
 		 //int choice = 0;
 		
@@ -143,7 +168,6 @@ public class calculator {
 		 		System.out.println(fahrenhiet(num1));
 		 		break;
 		 	
-
 //Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -176,9 +200,27 @@ public class calculator {
 //Aadil -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		 	
 
+//Shayiq -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+			 	
+		 	case "12":
+		 		System.out.println("Enter your mass and length respectively");
+		 		num1 = scan.nextDouble();
+		 		num2 = scan.nextDouble();
+		 		metric(num1, num2);
+		 		break;
+		 	case "13":
+		 		System.out.println("Enter your mass and length respectively ");
+		 		num1 = scan.nextDouble();
+		 		num2 = scan.nextDouble();
+		 		imperial(num1, num2);
+		 		break;
 		 	
+//Shayiq -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+			 			 	
+		 	
+		 		
 		 	default:
-				System.out.println("unknown choise");
+				System.out.println("unknown choice");
 		 }
 		 	System.out.println("Do you want to continue?");
 		 	//con = scan.nextLine();
@@ -208,4 +250,9 @@ public class calculator {
 //		  }
 //Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
-	
+//
+
+
+
+
+//
