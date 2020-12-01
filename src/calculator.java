@@ -294,7 +294,7 @@ public class calculator {
 //Shayiq -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			 	
 		 	case "12":
-		 		System.out.println("Enter your mass and length respectively");
+		 		System.out.println("Enter your mass and length respectively");//separate mass and length 
 		 		num1 = scan.nextDouble();
 		 		num2 = scan.nextDouble();
 		 		metric(num1, num2);
