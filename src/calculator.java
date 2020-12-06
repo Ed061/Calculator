@@ -80,21 +80,24 @@ public class calculator {
 	
 //Shayiq ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
-	public static void metric(double num1, double num2) {
+	public static void metric(double num1) {
 		double mass;
-		double length;
 		mass =num1/28.35;
-		length =num2/2.54;
 		System.out.println(mass + " ounces");
-		System.out.println(length + " inches");
-		}
-	
-	public static void imperial(double num1, double num2) {
-		double mass;
+	}
+	public static void metric1(double num2) {
 		double length;
+		length =num2/2.54;
+		System.out.println(length + " inches");
+	}	
+	public static void imperial(double num1) {
+		double mass;
 		mass=num1*28.35;
-		length=num2*2.54;
 		System.out.println(mass + " grams");
+	}
+	public static void imperial1(double num2) {
+		double length;
+		length=num2*2.54;
 		System.out.println(length + " centimeters");
 	}
 	
@@ -121,8 +124,10 @@ public class calculator {
 		 System.out.println("[9] Subtraction");
 		 System.out.println("[10] Multiplication");
 		 System.out.println("[11] Division");
-		 System.out.println("[12] Convert Metric into Imperial");
-		 System.out.println("[13] Convert Imperial into Metric");
+		 System.out.println("[12] Convert Metric into Imperial for mass");
+		 System.out.println("[13] Convert Metric into Imperia for length");
+		 System.out.println("[14] Convert Imperial into Metric for mass");
+		 System.out.println("[15] Convert Imperial into Metric for length");
 		 double num1 = 0, num2 = 0;
 		 //int choice = 0;
 		
@@ -294,18 +299,25 @@ public class calculator {
 //Shayiq -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			 	
 		 	case "12":
-		 		System.out.println("Enter your mass and length respectively");//separate mass and length 
+		 		System.out.println("Enter your mass");//separate mass and length 
 		 		num1 = scan.nextDouble();
-		 		num2 = scan.nextDouble();
-		 		metric(num1, num2);
+		 		metric(num1);
 		 		break;
-		 	case "13":
-		 		System.out.println("Enter your mass and length respectively ");
+		 	case "13":	
+		 		System.out.println("Enter your length");
+		 		num2 = scan.nextDouble();
+		 		metric1(num2);
+		 		break;
+		 	case "14":
+		 		System.out.println("Enter your mass");	 
 		 		num1 = scan.nextDouble();
-		 		num2 = scan.nextDouble();
-		 		imperial(num1, num2);
+		 		imperial(num1);
 		 		break;
-		 	
+		 	case "15":
+		 		System.out.println("Enter your length");	 
+		 		num2 = scan.nextDouble();
+		 		imperial1(num2);
+		 		break;
 //Shayiq -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			 			 	
 		 	
@@ -341,7 +353,23 @@ public class calculator {
 //		  }
 //Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
-//change
+//Essa
+
+public static String todec(String[] args) 
+{
+   Scanner sc = new Scanner(System.in);
+   System.out.println("Please enter hexadecimal number: ");
+   String strHexNumber = sc.nextLine();    
+   // converting hexadecimal to decimal by passing base 16 
+   int decimalNumber = Integer.parseInt(strHexNumber, 16);
+   System.out.println("Converting hexadecimal to decimal: " + decimalNumber);
+   sc.close();
+}
+}
+   
+
+
+
 
 
 
