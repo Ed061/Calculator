@@ -335,7 +335,7 @@ public class calculator {
 	
 		//scan.close();
 	}		
-}
+
 //Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //		Scanner ob1 = new Scanner(System.in);
 //			temperature tempObject = new temperature ();
