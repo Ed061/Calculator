@@ -35,6 +35,10 @@ public class calculator {
 	public static double fahrenhiet(double num1) {
 		return ((num1 -32 ) * 5/9);
 	}
+	
+	public static double BtoD(double num1) {
+		
+	}
 //Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	public static String tohex(int num) {
@@ -128,6 +132,7 @@ public class calculator {
 		 System.out.println("[13] Convert Metric into Imperia for length");
 		 System.out.println("[14] Convert Imperial into Metric for mass");
 		 System.out.println("[15] Convert Imperial into Metric for length");
+		 System.out.println("[16] Convert Binary to Decimal");
 		 double num1 = 0, num2 = 0;
 		 //int choice = 0;
 		
@@ -164,14 +169,20 @@ public class calculator {
 		 		break;
 //Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		 	case "6":
-		 		System.out.println("Enter your number");
+		 		System.out.println("Enter your number: ");
 		 		num1 = scan.nextDouble();
 		 		System.out.println(celsius(num1));
 		 		break;
 		 	case "7":
-		 		System.out.println("Enter your number");
+		 		System.out.println("Enter your number: ");
 		 		num1 = scan.nextDouble();
 		 		System.out.println(fahrenhiet(num1));
+		 		break;
+		 	case"16":
+		 		System.out.print("Enter a binary number: ");
+		 		Scanner input = new Scanner(System.in);
+			    String binaryString = input.nextLine();
+			    System.out.println(Integer.parseInt(binaryString,2));  //java has Integer.pareInt() 
 		 		break;
 		 	
 //Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -320,7 +331,6 @@ public class calculator {
 		 		break;
 //Shayiq -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			 			 	
-		 	
 		 		
 		 	default:
 				System.out.println("unknown choice");
@@ -335,23 +345,8 @@ public class calculator {
 	
 		//scan.close();
 	}		
-
-//Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//		Scanner ob1 = new Scanner(System.in);
-//			temperature tempObject = new temperature ();
-//			
-//			System.out.println("Please enter a 1 to convert Fahrenheit to Celsius or Please enter a 2 to convert Celsius to Fahrenheit");
-//			String option = ob1.next();
-//		  if (option.equals("1")){
-//		      System.out.println("Please enter a temperature in degrees Fahrenheit.");
-//		      tempObject.cel();
-//		  }else if (option.equals("2")){
-//		      System.out.println("Please enter a temperature in degrees Celsius.");
-//		      tempObject.fah();
-//		  }else{
-//		      System.out.println("ERROR!");
-//		  }
-//Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
 //Essa
 
