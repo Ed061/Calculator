@@ -33,7 +33,7 @@ public class calculator {
 		
 		int i = 0;
 		int binary[] = new int[100];
-		String bin = "";
+		String conv = "";
 		
 		while(decimal != 0) {
 			// This finds out the binary number of the decimal but it is stored in reverse order in array
@@ -43,10 +43,10 @@ public class calculator {
 		}
 		
 		// Reading the elements stored in the array in reverse order to get binary digits in right order
-		for (i-=1; i>=0; i--) {
-			bin += binary[i];
+		for (i -= 1; i >= 0; i--) {
+			conv += binary[i];
 		}
-		return bin;
+		return conv;
 	}
 	
 	public static String tohex(int num) {//converting decimal to hexadecimal
