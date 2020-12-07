@@ -349,7 +349,7 @@ public class calculator {
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
 //Essa
-
+/*
 public static String todec(String[] args) 
 {
    Scanner sc = new Scanner(System.in);
@@ -362,11 +362,5 @@ public static String todec(String[] args)
 }
 }
    
+*/
 
-
-
-
-
-
-
-//
