@@ -319,7 +319,7 @@ public class calculator {
 		 		imperial1(num2);
 		 		break;
 		 	case "18":
-		 		System.out.println("Enter your hex number");
+		 		System.out.println("Enter your number");
 		 		String hnum;
 		 		hnum= scan.nextLine();
 		 		System.out.println(hetode (hnum));
