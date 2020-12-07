@@ -318,6 +318,30 @@ public class calculator {
 		 		num2 = scan.nextDouble();
 		 		imperial1(num2);
 		 		break;
+		 	case "18":
+		 		System.out.println("Enter your hex number");
+		 		String hnum;
+		 		hnum= scan.nextLine();
+		 		System.out.println(hetode (hnum));
+		 		break;
+		 		
+		 		
+		 		
+		 		
+		 	
+	                
+		 		
+		 		
+		 		
+		 		
+		 		
+		 		
+		 		
+		 		
+		 		
+		 		
+		 				
+		 
 //Shayiq -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			 			 	
 		 	
@@ -335,7 +359,7 @@ public class calculator {
 	
 		//scan.close();
 	}		
-}
+
 //Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //		Scanner ob1 = new Scanner(System.in);
 //			temperature tempObject = new temperature ();
@@ -353,18 +377,37 @@ public class calculator {
 //		  }
 //Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
-//Essa
+//Essa -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-public static String todec(String[] args) 
+public static int hetode(String dig)
 {
-   Scanner sc = new Scanner(System.in);
-   System.out.println("Please enter hexadecimal number: ");
-   String strHexNumber = sc.nextLine();    
-   // converting hexadecimal to decimal by passing base 16 
-   int decimalNumber = Integer.parseInt(strHexNumber, 16);
-   System.out.println("Converting hexadecimal to decimal: " + decimalNumber);
-   sc.close();
+	String hexd;
+	int m,num=0;
+	char lett;
+	hexd="0123456789ABCDEF";
+	dig=dig.toUpperCase();
+	num=0;
+	for(int k=0; k<dig.length() ;k++)
+{
+	lett =dig.charAt(k) ;
+	m=hexd.indexOf(lett) ;
+	num=16*num+m;
+}		
+	return num;
+
 }
+     public static void hex(String[] args) {
+	//Program to Convert a hexadecimal to a decimal
+    String hnum;
+    int dnum;
+    Scanner accept = new Scanner (System.in) ;
+    System.out.print("Enter hexadecimal number to be converted : ");
+    hnum=accept.nextLine();
+    dnum=hetode(hnum) ;
+    System.out.println("Converted Decimal is "+dnum);
+    
+     }
+     
 }
    
 
