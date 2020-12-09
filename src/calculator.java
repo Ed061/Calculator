@@ -213,119 +213,33 @@ public class calculator {
 				//Aadil -----------------------------------------------------------------------------------------------------------------------------------------------------------------------		 		
 			case "8":
 				System.out.println("Enter your numbers");
-
-				do {
-					if (scan.hasNextDouble()) {
-						num1 = scan.nextDouble();
-						validate = true;
-					} else {
-						System.out.println("Enter a number");
-						validate = false;
-						scan.next();
-					}
-				} while (!(validate));
-
-				do {
-					if (scan.hasNextDouble()) {
-						num2 = scan.nextDouble();
-						validate = true;
-					} else {
-						System.out.println("Enter a number");
-						validate = false;
-						scan.next();
-					}
-				} while (!(validate));
-
+				num1 = scan.nextDouble();
+				num2 = scan.nextDouble();
 				System.out.println(add(num1, num2));
 
 				break;
 			case "9":
-
 				System.out.println("Enter your numbers");
-
-				do {
-					if (scan.hasNextDouble()) {
-						num1 = scan.nextDouble();
-						validate = true;
-					} else {
-						System.out.println("Enter a number");
-						validate = false;
-						scan.next();
-					}
-				} while (!(validate));
-
-				do {
-					if (scan.hasNextDouble()) {
-						num2 = scan.nextDouble();
-						validate = true;
-					} else {
-						System.out.println("Enter a number");
-						validate = false;
-						scan.next();
-					}
-				} while (!(validate));
-
+				num1 = scan.nextDouble();
+				num2 = scan.nextDouble();
 				System.out.println(sub(num1, num2));
 
 				break;
 			case "10":
-
 				System.out.println("Enter your numbers");
-
-				do {
-					if (scan.hasNextDouble()) {
-						num1 = scan.nextDouble();
-						validate = true;
-					} else {
-						System.out.println("Enter a number");
-						validate = false;
-						scan.next();
-					}
-				} while (!(validate));
-
-				do {
-					if (scan.hasNextDouble()) {
-						num2 = scan.nextDouble();
-						validate = true;
-					} else {
-						System.out.println("Enter a number");
-						validate = false;
-						scan.next();
-					}
-				} while (!(validate));
-
+				num1 = scan.nextDouble();
+				num2 = scan.nextDouble();
 				System.out.println(multi(num1, num2));
-
+			
 				break;
 			case "11":
 				System.out.println("Enter your numbers");
-
-				do {
-					if (scan.hasNextDouble()) {
-						num1 = scan.nextDouble();
-						validate = true;
-					} else {
-						System.out.println("Enter a number");
-						validate = false;
-						scan.next();
-					}
-				} while (!(validate));
-
-				do {
-					if (scan.hasNextDouble()) {
-						num2 = scan.nextDouble();
-						validate = true;
-					} else {
-						System.out.println("Enter a number");
-						validate = false;
-						scan.next();
-					}
-				} while (!(validate));
-
+				System.out.println("Enter your numbers");
+				num1 = scan.nextDouble();
+				num2 = scan.nextDouble();
 				System.out.println(div(num1, num2));
 
 				break;
-
 				//Aadil -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
