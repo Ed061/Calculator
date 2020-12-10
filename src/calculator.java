@@ -177,7 +177,7 @@ public class calculator {
 			System.out.println("[11] Multiplication");
 			System.out.println("[12] Division");
 			System.out.println("[13] Convert Metric into Imperial for mass");
-			System.out.println("[14] Convert Metric into Imperia for length");
+			System.out.println("[14] Convert Metric into Imperial for length");
 			System.out.println("[15] Convert Imperial into Metric for mass");
 			System.out.println("[16] Convert Imperial into Metric for length");
 			System.out.println("[17] Convert Binary to Decimal");
