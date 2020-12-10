@@ -69,9 +69,17 @@ public class calculator {
 		return ((num1 -32 ) * 5/9);
 	}
 
-	//	public static double BtoD(double num1) {
-
-	//	}
+	public static double BtoD(int num3) {
+		int d = 0;
+		int t = num3;
+		int i = 0;
+		while(t>0) {
+			int r = t%10;
+			t = t/10;
+			d = d+ r *(int)Math.pow(2, i++);
+		}
+		return d;
+	}
 	//Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	//Aadil -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -202,9 +210,8 @@ public class calculator {
 				break;
 			case"16":
 				System.out.print("Enter a binary number: ");
-				Scanner input = new Scanner(System.in);
-				String binaryString = input.nextLine();
-				System.out.println(Integer.parseInt(binaryString,2));  //java has Integer.pareInt() 
+				int num3 = scan.nextInt();
+				System.out.println(BtoD(num3));
 				break;
 
 				//Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
