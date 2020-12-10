@@ -136,11 +136,29 @@ public class calculator {
 
 	//Shayiq ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+	//Essa
 
-	//Aadil -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	public static int hetode(String dig)
+	{
+		String hexd;
+		int m,num=0;
+		char lett;
+		hexd="0123456789ABCDEF";
+		dig=dig.toUpperCase();
+		num=0;
+		for(int k=0; k<dig.length() ;k++)
+		{
+			lett =dig.charAt(k) ;
+			m=hexd.indexOf(lett) ;
+			num=16*num+m;
+		}		
+		return num;
+
+	}
+	//Aadil ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	public static void main (String[]args) {
-		boolean validate;
+		
 		String con = "Y";
 		Scanner scan = new Scanner(System.in);//opening the scanner
 		do {
@@ -150,19 +168,20 @@ public class calculator {
 			System.out.println("[2] Modulo");
 			System.out.println("[3] Square root");
 			System.out.println("[4] Cube root");
-			System.out.println("[5] Convert number to hex");
-			System.out.println("[6] Convert Celsius into Fahrenheit");
-			System.out.println("[7] Convert Fahrenheit into Celsius");
-			System.out.println("[8] Addition");
-			System.out.println("[9] Subtraction");
-			System.out.println("[10] Multiplication");
-			System.out.println("[11] Division");
-			System.out.println("[12] Convert Metric into Imperial for mass");
-			System.out.println("[13] Convert Metric into Imperia for length");
-			System.out.println("[14] Convert Imperial into Metric for mass");
-			System.out.println("[15] Convert Imperial into Metric for length");
-			System.out.println("[16] Convert Binary to Decimal");
-			System.out.println("[17] Convert Decimal to Binary");
+			System.out.println("[5] Convert Decimal to Hexadecimal");
+			System.out.println("[6] Convert Hexadecimal to Decimal");
+			System.out.println("[7] Convert Celsius into Fahrenheit");
+			System.out.println("[8] Convert Fahrenheit into Celsius");
+			System.out.println("[9] Addition");
+			System.out.println("[10] Subtraction");
+			System.out.println("[11] Multiplication");
+			System.out.println("[12] Division");
+			System.out.println("[13] Convert Metric into Imperial for mass");
+			System.out.println("[14] Convert Metric into Imperia for length");
+			System.out.println("[15] Convert Imperial into Metric for mass");
+			System.out.println("[16] Convert Imperial into Metric for length");
+			System.out.println("[17] Convert Binary to Decimal");
+			System.out.println("[18] Convert Decimal to Binary");
 			double num1 = 0, num2 = 0;
 			//int choice = 0;
 
@@ -197,18 +216,25 @@ public class calculator {
 				hexnr = scan.nextInt();
 				System.out.println(tohex(hexnr));
 				break;
-				//Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+				//Essa
 			case "6":
+				System.out.println("Enter your number");
+				String hnum;
+				hnum= scan.nextLine();
+				System.out.println(hetode (hnum));
+				break;
+				//Divy -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+			case "7":
 				System.out.println("Enter your number: ");
 				num1 = scan.nextDouble();
 				System.out.println(celsius(num1));
 				break;
-			case "7":
+			case "8":
 				System.out.println("Enter your number: ");
 				num1 = scan.nextDouble();
 				System.out.println(fahrenhiet(num1));
 				break;
-			case"16":
+			case"17":
 				System.out.print("Enter a binary number: ");
 				int num3 = scan.nextInt();
 				System.out.println(BtoD(num3));
@@ -218,28 +244,28 @@ public class calculator {
 
 
 				//Aadil -----------------------------------------------------------------------------------------------------------------------------------------------------------------------		 		
-			case "8":
+			case "9":
 				System.out.println("Enter your numbers");
 				num1 = scan.nextDouble();
 				num2 = scan.nextDouble();
 				System.out.println(add(num1, num2));
 
 				break;
-			case "9":
+			case "10":
 				System.out.println("Enter your numbers");
 				num1 = scan.nextDouble();
 				num2 = scan.nextDouble();
 				System.out.println(sub(num1, num2));
 
 				break;
-			case "10":
+			case "11":
 				System.out.println("Enter your numbers");
 				num1 = scan.nextDouble();
 				num2 = scan.nextDouble();
 				System.out.println(multi(num1, num2));
 			
 				break;
-			case "11":
+			case "12":
 				System.out.println("Enter your numbers");
 				System.out.println("Enter your numbers");
 				num1 = scan.nextDouble();
@@ -252,43 +278,33 @@ public class calculator {
 
 				//Shayiq -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-			case "12":
+			case "13":
 				System.out.println("Enter your mass");//separate mass and length 
 				num1 = scan.nextDouble();
 				metric(num1);
 				break;
-			case "13":	
+			case "14":	
 				System.out.println("Enter your length");
 				num2 = scan.nextDouble();
 				metric1(num2);
 				break;
-			case "14":
+			case "15":
 				System.out.println("Enter your mass");	 
 				num1 = scan.nextDouble();
 				imperial(num1);
 				break;
-			case "15":
+			case "16":
 				System.out.println("Enter your length");	 
 				num2 = scan.nextDouble();
 				imperial1(num2);
 				break;
-			case "17"://convert Decimal to Binary
+			case "18"://convert Decimal to Binary
 				System.out.print("Enter a decimal number: ");
 				int decimal;
 				decimal = scan.nextInt();
 				System.out.println(DtoB(decimal));
 				break;
 				//Shayiq -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-				//Essa
-			case "18":
-				System.out.println("Enter your number");
-				String hnum;
-				hnum= scan.nextLine();
-				System.out.println(hetode (hnum));
-				break;
 
 			default:
 				System.out.println("unknown choice");
@@ -303,26 +319,6 @@ public class calculator {
 
 		//scan.close();
 	}		
-
-	//Essa
-
-	public static int hetode(String dig)
-	{
-		String hexd;
-		int m,num=0;
-		char lett;
-		hexd="0123456789ABCDEF";
-		dig=dig.toUpperCase();
-		num=0;
-		for(int k=0; k<dig.length() ;k++)
-		{
-			lett =dig.charAt(k) ;
-			m=hexd.indexOf(lett) ;
-			num=16*num+m;
-		}		
-		return num;
-
-	}
 
 }
 
